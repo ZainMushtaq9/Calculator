@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Profit Calculator - Calculate Cryptocurrency ROI & Profit/Loss | Free Tool</title>
+  <meta name="description" content="Free crypto profit calculator. Calculate cryptocurrency profit, loss, and ROI from buy/sell prices. Perfect for Bitcoin, Ethereum, and all crypto trading calculations.">
+  <link rel="canonical" href="https://yourdomain.com/crypto-profit-calculator.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo"><span class="logo-icon">🧮</span><span>CalcHub</span></a>
+      <nav class="nav-links"><a href="/">Home</a><a href="#calculator">Calculator</a><a href="#faq">FAQ</a></nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <h1>Crypto Profit Calculator</h1>
+      <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 2rem;">
+        Calculate your cryptocurrency profit or loss with accurate ROI percentage. Enter buy price, sell price, 
+        quantity, and optional fees to get instant results for any crypto trade.
+      </p>
+
+      <div id="calculator" class="calculator-card">
+        <h2 style="margin-bottom: 1.5rem;">Calculate Crypto Profit/Loss</h2>
+        <form id="cryptoForm">
+          <div class="input-group">
+            <label for="buyPrice">Buy Price ($)</label>
+            <div class="input-with-icon">
+              <span class="input-icon">$</span>
+              <input type="number" id="buyPrice" placeholder="Enter buy price (e.g., 45000)" min="0" step="0.01" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="sellPrice">Sell Price ($)</label>
+            <div class="input-with-icon">
+              <span class="input-icon">$</span>
+              <input type="number" id="sellPrice" placeholder="Enter sell price (e.g., 50000)" min="0" step="0.01" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="quantity">Quantity/Amount</label>
+            <div class="input-with-icon">
+              <span class="input-icon">₿</span>
+              <input type="number" id="quantity" placeholder="Enter quantity (e.g., 0.5)" min="0" step="0.0001" required>
+            </div>
+            <small style="color: var(--gray-600); font-size: 0.85rem;">Number of coins/tokens purchased</small>
+          </div>
+
+          <div class="input-group">
+            <label for="tradingFee">Trading Fees (% per transaction)</label>
+            <div class="input-with-icon">
+              <span class="input-icon">%</span>
+              <input type="number" id="tradingFee" placeholder="Enter fee % (e.g., 0.1)" min="0" max="10" step="0.01" value="0.1">
+            </div>
+            <small style="color: var(--gray-600); font-size: 0.85rem;">Optional: Combined buy + sell fee percentage</small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Calculate Profit</button>
+        </form>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="resultContainer" class="result-container">
+          <div class="result-label" id="profitLabel">Total Profit</div>
+          <div id="profitAmount" class="result-value">$0</div>
+          
+          <div class="result-secondary">
+            <div class="result-item">
+              <span class="result-item-label">ROI (Return on Investment):</span>
+              <span id="roiPercentage" class="result-item-value">0%</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Total Investment:</span>
+              <span id="totalInvestment" class="result-item-value">$0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Total Return:</span>
+              <span id="totalReturn" class="result-item-value">$0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Trading Fees:</span>
+              <span id="totalFees" class="result-item-value">$0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Complete Guide to Crypto Profit Calculation</h2>
+        
+        <h3>How to Calculate Crypto Profit</h3>
+        <p>Calculating cryptocurrency profit involves determining the difference between your selling price and buying price, accounting for the quantity traded and any fees incurred. The basic formula is:</p>
+        <p style="background: var(--gray-100); padding: 1rem; border-radius: var(--radius-md); font-family: monospace;">
+          Profit = (Sell Price - Buy Price) × Quantity - Fees
+        </p>
+
+        <h3>Understanding ROI (Return on Investment)</h3>
+        <p>ROI expresses your profit as a percentage of your initial investment. It helps compare different investments regardless of their size:</p>
+        <p style="background: var(--gray-100); padding: 1rem; border-radius: var(--radius-md); font-family: monospace;">
+          ROI % = (Profit / Total Investment) × 100
+        </p>
+
+        <h3>Common Crypto Trading Scenarios</h3>
+        
+        <h4>Example 1: Bitcoin Profit</h4>
+        <p><strong>Buy Price:</strong> $40,000<br>
+        <strong>Sell Price:</strong> $45,000<br>
+        <strong>Quantity:</strong> 0.5 BTC<br>
+        <strong>Fees:</strong> 0.1% per transaction (0.2% total)<br>
+        <strong>Profit:</strong> $2,450<br>
+        <strong>ROI:</strong> 12.25%</p>
+
+        <h4>Example 2: Ethereum Loss</h4>
+        <p><strong>Buy Price:</strong> $3,000<br>
+        <strong>Sell Price:</strong> $2,500<br>
+        <strong>Quantity:</strong> 2 ETH<br>
+        <strong>Fees:</strong> 0.25% per transaction<br>
+        <strong>Loss:</strong> -$1,027.50<br>
+        <strong>ROI:</strong> -17.13%</p>
+
+        <h3>Factors Affecting Crypto Profits</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Market Volatility:</strong> Crypto prices can change dramatically in minutes</li>
+          <li><strong>Trading Fees:</strong> Exchange fees reduce net profit significantly over time</li>
+          <li><strong>Timing:</strong> Entry and exit timing crucial for maximizing returns</li>
+          <li><strong>Gas Fees:</strong> Network fees (especially Ethereum) can be substantial</li>
+          <li><strong>Slippage:</strong> Price difference between expected and executed price</li>
+          <li><strong>Tax Implications:</strong> Capital gains tax applies in most countries</li>
+        </ul>
+
+        <h3>Types of Cryptocurrency Trading</h3>
+        
+        <h4>Day Trading</h4>
+        <p>Buying and selling within the same day to profit from short-term price movements. Requires constant monitoring and higher risk tolerance.</p>
+
+        <h4>Swing Trading</h4>
+        <p>Holding positions for days to weeks to capitalize on medium-term trends. Less time-intensive than day trading.</p>
+
+        <h4>HODLing (Long-term Holding)</h4>
+        <p>Buying and holding for months or years, betting on long-term value appreciation. Minimizes trading fees and short-term volatility impact.</p>
+
+        <h3>Understanding Trading Fees</h3>
+        <p>Different exchanges charge different fee structures:</p>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Maker Fees:</strong> Paid when you add liquidity (limit orders) - typically 0.05-0.2%</li>
+          <li><strong>Taker Fees:</strong> Paid when you remove liquidity (market orders) - typically 0.1-0.3%</li>
+          <li><strong>Withdrawal Fees:</strong> Network fees for moving crypto off exchange</li>
+          <li><strong>Deposit Fees:</strong> Some exchanges charge for fiat deposits</li>
+        </ul>
+
+        <h3>Strategies to Maximize Crypto Profits</h3>
+        <ol style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Dollar-Cost Averaging:</strong> Invest fixed amounts regularly to average out price volatility</li>
+          <li><strong>Set Stop-Loss Orders:</strong> Automatically sell if price drops to limit losses</li>
+          <li><strong>Take Profits Gradually:</strong> Sell portions at different price levels</li>
+          <li><strong>Choose Low-Fee Exchanges:</strong> Fees compound over multiple trades</li>
+          <li><strong>Time Your Trades:</strong> Avoid trading during extreme volatility</li>
+          <li><strong>Research Thoroughly:</strong> Understand the project before investing</li>
+          <li><strong>Diversify Portfolio:</strong> Don't put all funds in one cryptocurrency</li>
+          <li><strong>Keep Detailed Records:</strong> Track all trades for tax purposes</li>
+        </ol>
+
+        <h3>Tax Considerations</h3>
+        <p>In most countries, cryptocurrency trading is subject to capital gains tax:</p>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Short-term gains:</strong> Held less than 1 year - taxed as ordinary income</li>
+          <li><strong>Long-term gains:</strong> Held more than 1 year - typically lower tax rates</li>
+          <li><strong>Trading crypto-to-crypto:</strong> Also taxable in most jurisdictions</li>
+          <li><strong>Losses:</strong> Can often offset gains to reduce tax liability</li>
+        </ul>
+
+        <h3>Risk Management Tips</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>Never invest more than you can afford to lose</li>
+          <li>Use only 1-2% of portfolio per trade</li>
+          <li>Always set stop-loss orders</li>
+          <li>Don't trade on emotion or FOMO (Fear of Missing Out)</li>
+          <li>Secure your holdings in hardware wallets for long-term storage</li>
+          <li>Enable two-factor authentication on all exchanges</li>
+          <li>Beware of pump-and-dump schemes</li>
+        </ul>
+      </section>
+
+      <section id="faq" class="section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">How is crypto profit calculated?</div>
+          <div class="faq-answer">Crypto profit = (Sell Price - Buy Price) × Quantity - Trading Fees. For example, if you buy 1 BTC at $40,000 and sell at $45,000 with 0.2% total fees ($100), your profit is $4,900.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What is a good ROI for cryptocurrency trading?</div>
+          <div class="faq-answer">This varies greatly by strategy and timeframe. Day traders might target 1-3% per trade. Swing traders might aim for 10-30% over weeks. Long-term holders historically see 100%+ over years, but also risk significant losses. Anything above 20% annually is considered excellent.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do I pay taxes on crypto profits?</div>
+          <div class="faq-answer">Yes, in most countries. Crypto profits are typically subject to capital gains tax. Short-term gains (held less than a year) are often taxed at higher rates than long-term gains. Consult a tax professional for your specific situation.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Should I include trading fees in profit calculations?</div>
+          <div class="faq-answer">Absolutely. Trading fees significantly impact net profit, especially for frequent traders. A 0.1% fee on both buy and sell means 0.2% total, which compounds quickly over multiple trades. Always factor in all fees for accurate profit calculations.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What's the difference between realized and unrealized profit?</div>
+          <div class="faq-answer">Realized profit is from completed trades (you've sold and received cash/stablecoin). Unrealized profit is current value minus purchase price for holdings you still own. Unrealized profits can disappear with price drops - they're not real until you sell.</div>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>⚠️ Disclaimer:</strong> Cryptocurrency trading involves substantial risk of loss. This calculator provides estimates only and should not be considered financial advice. Past performance doesn't guarantee future results. Always do your own research and consult financial advisors before investing.
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="loan-emi-calculator.html">Loan EMI</a>
+        <a href="freelance-rate-calculator.html">Freelance Rate</a>
+      </div>
+      <p class="footer-copyright">© 2026 CalcHub. All calculators are free to use.</p>
+    </div>
+  </footer>
+
+  <script src="crypto-profit.js"></script>
+</body>
+</html>

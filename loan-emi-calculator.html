@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"="width=device-width, initial-scale=1.0">
+  <title>Loan EMI Calculator Pakistan - Calculate Monthly Payments in PKR | Free Tool</title>
+  <meta name="description" content="Free loan EMI calculator for Pakistan. Calculate monthly EMI for home loans, car loans, personal loans in PKR. Instant results with detailed breakdown.">
+  <link rel="canonical" href="https://yourdomain.com/loan-emi-calculator.html">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🧮</span>
+        <span>CalcHub PK</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <div class="hero-icon">💰</div>
+      <h1>Loan EMI Calculator Pakistan</h1>
+      <p class="hero-subtitle">
+        Calculate your monthly loan payment (EMI) instantly for home loans, car loans, and personal loans in Pakistani Rupees (PKR). 
+        Get accurate results with detailed breakdown of principal and interest.
+      </p>
+    </div>
+
+    <!-- AdSense Ad 1 -->
+    <div class="ad-container">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div id="calculator" class="calculator-card">
+      <h2>Calculate Your EMI in PKR</h2>
+      <form id="emiForm">
+        <div class="input-group">
+          <label for="loanAmount">Loan Amount (PKR)</label>
+          <div class="input-with-icon">
+            <input type="number" id="loanAmount" placeholder="e.g., 5000000" min="0" step="10000" required>
+            <span class="input-icon">₨</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <div class="input-with-icon">
+            <input type="number" id="interestRate" placeholder="e.g., 12.5" min="0" max="30" step="0.1" required>
+            <span class="input-icon">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="loanTenure">Loan Tenure (Years)</label>
+          <div class="input-with-icon">
+            <input type="number" id="loanTenure" placeholder="e.g., 15" min="1" max="40" step="1" required>
+            <span class="input-icon">📅</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Calculate EMI</button>
+      </form>
+
+      <div id="errorMessage" class="error-message"></div>
+
+      <div id="resultContainer" class="result-container">
+        <div class="result-label">Monthly EMI Payment</div>
+        <div id="emiResult" class="result-value">₨0</div>
+        
+        <div class="result-secondary">
+          <div class="result-item">
+            <span class="result-item-label">Total Interest:</span>
+            <span id="totalInterest" class="result-item-value">₨0</span>
+          </div>
+          <div class="result-item">
+            <span class="result-item-label">Total Amount:</span>
+            <span id="totalAmount" class="result-item-value">₨0</span>
+          </div>
+          <div class="result-item">
+            <span class="result-item-label">Loan Amount:</span>
+            <span id="principalAmount" class="result-item-value">₨0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AdSense Ad 2 -->
+    <div class="ad-container">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">Complete Guide to EMI Calculation in Pakistan</h2>
+      
+      <h3>What is EMI?</h3>
+      <p>EMI (Equated Monthly Installment) is a fixed payment amount that borrowers pay to lenders every month on a specified date. In Pakistan, EMI is commonly used for home loans, car loans, and personal loans. The EMI comprises both the principal amount and the interest charged on the loan.</p>
+
+      <h3>Types of Loans in Pakistan</h3>
+      
+      <h4>Home Loan EMI Calculator</h4>
+      <p>Calculate your monthly payments for home mortgages in Pakistan. Banks like HBL, UBL, MCB, and Meezan Bank offer home loans with competitive interest rates typically ranging from 12% to 18% annually. Home loans in Pakistan usually have tenures of 10-20 years.</p>
+
+      <h4>Car Loan EMI Calculator</h4>
+      <p>Planning to buy a car in Pakistan? Use this EMI calculator to estimate your monthly car loan payments. Car loans typically have shorter tenures (3-7 years) with interest rates between 15-20%. Popular banks offering car loans include Bank Alfalah, Allied Bank, and Askari Bank.</p>
+
+      <h4>Personal Loan EMI Calculator</h4>
+      <p>Personal loans in Pakistan are unsecured loans with higher interest rates (18-25% annually) and shorter tenures (1-5 years). Calculate your personal loan EMI to understand the total cost of borrowing for weddings, education, medical emergencies, or business needs.</p>
+
+      <h3>EMI Formula</h3>
+      <p style="background: var(--gray-100); padding: 1rem; border-radius: 0.5rem; font-family: monospace;">
+        EMI = [P × R × (1+R)^N] / [(1+R)^N-1]
+      </p>
+      <p>Where: P = Principal (loan amount in PKR), R = Monthly interest rate, N = Loan tenure in months</p>
+
+      <h3>Interest Rates in Pakistan (2026)</h3>
+      <ul style="margin-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Home Loans:</strong> 12% - 18% per annum</li>
+        <li><strong>Car Loans:</strong> 15% - 20% per annum</li>
+        <li><strong>Personal Loans:</strong> 18% - 25% per annum</li>
+        <li><strong>Business Loans:</strong> 14% - 22% per annum</li>
+      </ul>
+
+      <h3>How to Reduce Your EMI in Pakistan</h3>
+      <ol style="margin-left: 1.5rem; line-height: 1.8;">
+        <li>Increase your down payment to reduce principal</li>
+        <li>Extend loan tenure for lower monthly EMI (higher total interest)</li>
+        <li>Negotiate interest rates with multiple banks</li>
+        <li>Improve your credit score (CIBIL/ECIB rating)</li>
+        <li>Make prepayments when possible</li>
+        <li>Consider Islamic banking alternatives with lower markup rates</li>
+      </ol>
+
+      <h3>Popular Banks for Loans in Pakistan</h3>
+      <p>Major banks offering competitive loan products include: HBL (Habib Bank Limited), UBL (United Bank Limited), MCB (Muslim Commercial Bank), Meezan Bank, Bank Alfalah, Allied Bank, Askari Bank, Standard Chartered Pakistan, Faysal Bank, and Summit Bank.</p>
+    </section>
+
+    <section id="faq" class="section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">What is the average home loan EMI in Pakistan?</div>
+        <div class="faq-answer">For a PKR 5,000,000 home loan at 15% interest for 15 years, the monthly EMI would be approximately PKR 69,930. Actual EMI depends on the loan amount, interest rate, and tenure.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How can I reduce my loan EMI?</div>
+        <div class="faq-answer">You can reduce EMI by: increasing down payment, extending tenure, negotiating lower rates, making prepayments, or improving your credit score to qualify for better rates from Pakistani banks.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What is a good EMI to income ratio in Pakistan?</div>
+        <div class="faq-answer">Financial experts recommend keeping your total EMI payments below 40-50% of your monthly income. Pakistani banks typically use this ratio when evaluating loan applications.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Which Pakistani bank offers the lowest home loan rate?</div>
+        <div class="faq-answer">Interest rates vary by bank and change frequently. As of 2026, rates typically range from 12-18%. Check with HBL, UBL, MCB, Meezan Bank, and other major banks for current offers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I get a car loan with bad credit in Pakistan?</div>
+        <div class="faq-answer">Yes, but you may face higher interest rates and stricter terms. Some banks and Islamic financial institutions offer products for borrowers with lower credit scores, though at premium rates.</div>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      <strong>⚠️ Disclaimer:</strong> All EMI calculations shown are estimates only. Actual rates and terms vary by lender. Interest rates change based on State Bank of Pakistan policies and bank-specific criteria. Consult with financial advisors and banks for accurate loan information.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="home-loan-eligibility-calculator.html">Loan Eligibility</a>
+        <a href="youtube-earnings-calculator.html">YouTube Earnings</a>
+      </div>
+      <p class="footer-copyright">© 2026 CalcHub PK. Free calculators for Pakistan.</p>
+    </div>
+  </footer>
+
+  <script src="loan-emi.js"></script>
+</body>
+</html>

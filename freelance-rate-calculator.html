@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Rate Calculator - Calculate Hourly Rate & Salary Conversion | Free Tool</title>
+  <meta name="description" content="Free freelance rate calculator. Determine your ideal hourly rate based on desired income. Convert hourly to salary and calculate daily rates for freelancers and contractors.">
+  <link rel="canonical" href="https://yourdomain.com/freelance-rate-calculator.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo"><span class="logo-icon">🧮</span><span>CalcHub</span></a>
+      <nav class="nav-links"><a href="/">Home</a><a href="#calculator">Calculator</a><a href="#faq">FAQ</a></nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <h1>Freelance Rate Calculator</h1>
+      <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 2rem;">
+        Calculate your ideal freelance hourly rate and daily rate based on your desired annual income, working hours, 
+        and billable time. Perfect for freelancers, contractors, and consultants determining their rates.
+      </p>
+
+      <div id="calculator" class="calculator-card">
+        <h2 style="margin-bottom: 1.5rem;">Calculate Your Freelance Rate</h2>
+        <form id="freelanceForm">
+          <div class="input-group">
+            <label for="annualIncome">Desired Annual Income ($)</label>
+            <div class="input-with-icon">
+              <span class="input-icon">$</span>
+              <input type="number" id="annualIncome" placeholder="Enter desired yearly income (e.g., 80000)" min="0" step="1000" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="hoursPerWeek">Working Hours Per Week</label>
+            <div class="input-with-icon">
+              <span class="input-icon">⏰</span>
+              <input type="number" id="hoursPerWeek" placeholder="Enter hours per week (e.g., 40)" min="1" max="80" step="1" value="40" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="weeksPerYear">Billable Weeks Per Year</label>
+            <div class="input-with-icon">
+              <span class="input-icon">📅</span>
+              <input type="number" id="weeksPerYear" placeholder="Enter billable weeks (e.g., 48)" min="1" max="52" step="1" value="48" required>
+            </div>
+            <small style="color: var(--gray-600); font-size: 0.85rem;">Account for vacation, sick days, and non-billable time</small>
+          </div>
+
+          <div class="input-group">
+            <label for="expenses">Annual Business Expenses ($)</label>
+            <div class="input-with-icon">
+              <span class="input-icon">$</span>
+              <input type="number" id="expenses" placeholder="Enter yearly expenses (e.g., 10000)" min="0" step="500" value="0">
+            </div>
+            <small style="color: var(--gray-600); font-size: 0.85rem;">Software, equipment, insurance, marketing, etc.</small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Calculate Rate</button>
+        </form>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="resultContainer" class="result-container">
+          <div class="result-label">Your Hourly Rate Should Be</div>
+          <div id="hourlyRate" class="result-value">$0</div>
+          
+          <div class="result-secondary">
+            <div class="result-item">
+              <span class="result-item-label">Daily Rate (8 hours):</span>
+              <span id="dailyRate" class="result-item-value">$0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Monthly Rate:</span>
+              <span id="monthlyRate" class="result-item-value">$0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Total Billable Hours/Year:</span>
+              <span id="billableHours" class="result-item-value">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Complete Guide to Setting Freelance Rates</h2>
+        
+        <h3>Why Proper Rate Calculation Matters</h3>
+        <p>Setting the right freelance rate is crucial for sustainable business. Charge too little and you'll struggle financially; charge too much and you may lose clients. This calculator helps find the balance by considering all necessary factors including desired income, working hours, expenses, and non-billable time.</p>
+
+        <h3>Understanding Billable vs Non-Billable Time</h3>
+        <p>Freelancers typically only bill 60-80% of their working time. The rest goes to:</p>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>Marketing and client acquisition</li>
+          <li>Administrative tasks and bookkeeping</li>
+          <li>Professional development and learning</li>
+          <li>Proposals and estimates</li>
+          <li>Communication and email management</li>
+        </ul>
+
+        <h3>Common Business Expenses for Freelancers</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Software & Tools:</strong> $1,000-$5,000/year (subscriptions, licenses)</li>
+          <li><strong>Equipment:</strong> $500-$2,000/year (computer, monitors, peripherals)</li>
+          <li><strong>Insurance:</strong> $500-$2,000/year (health, liability, equipment)</li>
+          <li><strong>Marketing:</strong> $1,000-$5,000/year (website, ads, networking)</li>
+          <li><strong>Professional Services:</strong> $1,000-$3,000/year (accountant, lawyer)</li>
+          <li><strong>Office/Workspace:</strong> $0-$10,000/year (coworking, home office)</li>
+          <li><strong>Education:</strong> $500-$3,000/year (courses, conferences, books)</li>
+        </ul>
+
+        <h3>Hourly Rate vs Salary Conversion</h3>
+        <p>Converting between hourly and salary rates requires accounting for benefits employees receive that freelancers must cover themselves:</p>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>Health insurance</li>
+          <li>Retirement contributions</li>
+          <li>Paid time off</li>
+          <li>Sick leave</li>
+          <li>Equipment and tools</li>
+          <li>Professional development</li>
+        </ul>
+        <p>As a rule of thumb, freelance hourly rates should be 1.5-2x the equivalent employee hourly rate to account for these factors.</p>
+
+        <h3>Setting Rates by Experience Level</h3>
+        
+        <h4>Entry Level (0-2 years)</h4>
+        <p><strong>Typical Range:</strong> $25-$50/hour<br>
+        Focus on building portfolio and gaining experience. Competitive pricing helps land initial clients.</p>
+
+        <h4>Intermediate (2-5 years)</h4>
+        <p><strong>Typical Range:</strong> $50-$100/hour<br>
+        Established skills and proven track record justify mid-tier rates. Can specialize in specific niches.</p>
+
+        <h4>Senior (5-10 years)</h4>
+        <p><strong>Typical Range:</strong> $100-$200/hour<br>
+        Deep expertise and strong portfolio command premium rates. Often focus on strategic work.</p>
+
+        <h4>Expert (10+ years)</h4>
+        <p><strong>Typical Range:</strong> $200+/hour<br>
+        Industry authority status, high-value deliverables, and established reputation support top-tier pricing.</p>
+
+        <h3>Alternative Pricing Models</h3>
+        
+        <h4>Project-Based Pricing</h4>
+        <p>Charge per project rather than hourly. Benefits: Incentivizes efficiency, easier for clients to budget. Calculate by estimating hours needed and multiplying by your hourly rate, then add 20-30% buffer.</p>
+
+        <h4>Retainer Agreements</h4>
+        <p>Monthly fee for ongoing availability and services. Provides stable income and client gets priority access. Typically 10-20% discount vs hourly for guaranteed monthly income.</p>
+
+        <h4>Value-Based Pricing</h4>
+        <p>Price based on value delivered to client rather than time spent. Highest earning potential but requires strong positioning and proven ROI track record.</p>
+
+        <h3>Strategies to Increase Your Rates</h3>
+        <ol style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Specialize:</strong> Niche expertise commands premium rates</li>
+          <li><strong>Build Portfolio:</strong> Showcase successful projects and results</li>
+          <li><strong>Get Testimonials:</strong> Social proof justifies higher rates</li>
+          <li><strong>Improve Skills:</strong> Continuous learning adds value</li>
+          <li><strong>Target Better Clients:</strong> Enterprise clients pay more than startups</li>
+          <li><strong>Package Services:</strong> Bundle offerings for higher perceived value</li>
+          <li><strong>Raise Gradually:</strong> Increase 10-20% annually for existing clients</li>
+          <li><strong>Communicate Value:</strong> Clearly articulate ROI you provide</li>
+        </ol>
+
+        <h3>When to Say No to Low-Paying Work</h3>
+        <p>Taking every project, regardless of pay, can trap you in a cycle of underearning. Red flags to decline:</p>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>Clients who negotiate aggressively on rates</li>
+          <li>Projects requiring more hours than budget allows</li>
+          <li>Scope creep without additional compensation</li>
+          <li>Clients with unrealistic expectations</li>
+          <li>Work that doesn't align with your expertise or portfolio goals</li>
+        </ul>
+      </section>
+
+      <section id="faq" class="section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">How do I calculate my hourly rate as a freelancer?</div>
+          <div class="faq-answer">Divide your desired annual income (plus expenses) by billable hours per year. For example: $80,000 income + $10,000 expenses = $90,000 ÷ 1,920 billable hours (40 hours/week × 48 weeks) = $46.88/hour minimum rate.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What should my freelance rate be compared to salary?</div>
+          <div class="faq-answer">Your freelance hourly rate should typically be 1.5-2x the equivalent employee hourly rate. If an employee makes $50,000/year ($24/hour), your freelance rate should be $36-$48/hour to account for benefits, taxes, and business expenses.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How many billable weeks should I plan for?</div>
+          <div class="faq-answer">Most freelancers use 48 weeks (accounting for 4 weeks vacation/holidays) or 46 weeks (6 weeks off plus sick days). Never assume all 52 weeks are billable - you need time for business development, admin work, and breaks.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Should I include taxes in my rate calculation?</div>
+          <div class="faq-answer">Yes, as a freelancer you pay both employer and employee portions of payroll taxes (roughly 15.3% self-employment tax) plus income tax. Build tax obligations into your desired annual income to ensure you can cover them.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is it better to charge hourly or per project?</div>
+          <div class="faq-answer">Both have merits. Hourly protects against scope creep and fairly compensates your time. Project-based rewards efficiency and is easier for clients to approve. Many freelancers use hybrid: hourly for ongoing work, project-based for defined deliverables.</div>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>⚠️ Disclaimer:</strong> This calculator provides rate estimates based on your inputs. Actual market rates vary by industry, location, experience, and demand. Research your specific market and adjust accordingly. Consult with accountants about tax implications.
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="youtube-earnings-calculator.html">YouTube Earnings</a>
+        <a href="crypto-profit-calculator.html">Crypto Profit</a>
+      </div>
+      <p class="footer-copyright">© 2026 CalcHub. All calculators are free to use.</p>
+    </div>
+  </footer>
+
+  <script src="freelance-rate.js"></script>
+</body>
+</html>

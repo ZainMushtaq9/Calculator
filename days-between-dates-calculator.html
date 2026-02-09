@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Days Between Two Dates Calculator - Calculate Days, Weeks & Months | Free Tool</title>
+  <meta name="description" content="Free days calculator between two dates. Calculate exact number of days, weeks, and months between any two dates. Perfect for planning events, tracking deadlines, and date calculations.">
+  <link rel="canonical" href="https://yourdomain.com/days-between-dates-calculator.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo"><span class="logo-icon">🧮</span><span>CalcHub</span></a>
+      <nav class="nav-links"><a href="/">Home</a><a href="#calculator">Calculator</a><a href="#faq">FAQ</a></nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <h1>Days Between Two Dates Calculator</h1>
+      <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 2rem;">
+        Calculate the exact number of days between two dates. Get results in days, weeks, months, and years. 
+        Perfect for planning events, tracking project timelines, calculating deadlines, or counting down to special occasions.
+      </p>
+
+      <div id="calculator" class="calculator-card">
+        <h2 style="margin-bottom: 1.5rem;">Calculate Days Between Dates</h2>
+        <form id="daysForm">
+          <div class="input-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" required style="width: 100%; padding: 0.875rem 1rem; font-size: 1rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md);">
+          </div>
+
+          <div class="input-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" required style="width: 100%; padding: 0.875rem 1rem; font-size: 1rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md);">
+          </div>
+
+          <div class="input-group">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <input type="checkbox" id="includeEndDate" style="width: auto;">
+              <span>Include end date in calculation</span>
+            </label>
+            <small style="color: var(--gray-600); font-size: 0.85rem;">Check this to count the end date as a complete day</small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Calculate Days</button>
+        </form>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="resultContainer" class="result-container">
+          <div class="result-label">Total Days Between Dates</div>
+          <div id="totalDays" class="result-value">0 Days</div>
+          
+          <div class="result-secondary">
+            <div class="result-item">
+              <span class="result-item-label">Weeks:</span>
+              <span id="totalWeeks" class="result-item-value">0 weeks</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Months (approx):</span>
+              <span id="totalMonths" class="result-item-value">0 months</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Years (approx):</span>
+              <span id="totalYears" class="result-item-value">0 years</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Business Days (Mon-Fri):</span>
+              <span id="businessDays" class="result-item-value">0 days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Complete Guide to Date Calculations</h2>
+        
+        <h3>Common Uses for Days Between Dates Calculator</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Event Planning:</strong> Calculate days until weddings, parties, or conferences</li>
+          <li><strong>Project Management:</strong> Track project duration and deadlines</li>
+          <li><strong>Pregnancy Tracking:</strong> Calculate weeks and days into pregnancy</li>
+          <li><strong>Age Calculation:</strong> Determine exact age in days</li>
+          <li><strong>Vacation Planning:</strong> Count days for trip duration</li>
+          <li><strong>Legal Deadlines:</strong> Track statute of limitations or filing deadlines</li>
+          <li><strong>Business Calculations:</strong> Calculate billing periods or contract terms</li>
+          <li><strong>Historical Research:</strong> Determine time between historical events</li>
+        </ul>
+
+        <h3>Understanding Date Calculations</h3>
+        
+        <h4>Calendar Days vs Business Days</h4>
+        <p><strong>Calendar Days:</strong> Include all days - weekends and holidays. Used for most personal calculations.</p>
+        <p><strong>Business Days:</strong> Only Monday-Friday, excluding weekends. Often used for delivery estimates, project timelines, and legal deadlines. This calculator estimates business days by counting weekdays.</p>
+
+        <h4>Inclusive vs Exclusive Counting</h4>
+        <p><strong>Exclusive (default):</strong> Counts only complete days between dates. Jan 1 to Jan 3 = 2 days.</p>
+        <p><strong>Inclusive:</strong> Includes both start and end dates. Jan 1 to Jan 3 = 3 days. Check the "Include end date" option for inclusive counting.</p>
+
+        <h3>Common Date Calculation Scenarios</h3>
+        
+        <h4>Example 1: Project Timeline</h4>
+        <p><strong>Start:</strong> January 15, 2026<br>
+        <strong>End:</strong> March 15, 2026<br>
+        <strong>Total Days:</strong> 59 days<br>
+        <strong>Business Days:</strong> ~42 days (Mon-Fri only)<br>
+        <strong>Weeks:</strong> 8 weeks, 3 days</p>
+
+        <h4>Example 2: Countdown to Event</h4>
+        <p><strong>Today:</strong> February 8, 2026<br>
+        <strong>Wedding Date:</strong> June 20, 2026<br>
+        <strong>Days Until:</strong> 132 days<br>
+        <strong>Weeks Until:</strong> 18 weeks, 6 days</p>
+
+        <h4>Example 3: Age in Days</h4>
+        <p><strong>Birth:</strong> January 1, 2000<br>
+        <strong>Current:</strong> February 8, 2026<br>
+        <strong>Age in Days:</strong> 9,535 days<br>
+        <strong>Age in Years:</strong> ~26.1 years</p>
+
+        <h3>Factors That Affect Date Calculations</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Leap Years:</strong> Every 4 years, February has 29 days instead of 28</li>
+          <li><strong>Month Lengths:</strong> Months vary from 28-31 days</li>
+          <li><strong>Time Zones:</strong> Dates can differ by timezone</li>
+          <li><strong>Daylight Saving:</strong> Doesn't affect day count but affects exact hours</li>
+          <li><strong>Business Days:</strong> Exclude weekends; may exclude holidays too</li>
+        </ul>
+
+        <h3>Days in Each Month</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>January: 31 days</li>
+          <li>February: 28 days (29 in leap years)</li>
+          <li>March: 31 days</li>
+          <li>April: 30 days</li>
+          <li>May: 31 days</li>
+          <li>June: 30 days</li>
+          <li>July: 31 days</li>
+          <li>August: 31 days</li>
+          <li>September: 30 days</li>
+          <li>October: 31 days</li>
+          <li>November: 30 days</li>
+          <li>December: 31 days</li>
+        </ul>
+
+        <h3>Leap Year Rules</h3>
+        <p>A year is a leap year if:</p>
+        <ol style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>It's divisible by 4, AND</li>
+          <li>If divisible by 100, it must also be divisible by 400</li>
+        </ol>
+        <p>Examples: 2024 is a leap year (÷4). 2100 is NOT a leap year (÷100 but not ÷400). 2000 was a leap year (÷400).</p>
+
+        <h3>Tips for Accurate Date Calculations</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>Double-check which date is start vs end to avoid negative results</li>
+          <li>Decide if you need inclusive or exclusive counting</li>
+          <li>For business days, verify if holidays should be excluded</li>
+          <li>Remember time zones when calculating international dates</li>
+          <li>Account for leap years in multi-year calculations</li>
+          <li>Use consistent date formats (YYYY-MM-DD is international standard)</li>
+        </ul>
+
+        <h3>Related Calculations</h3>
+        <h4>Add Days to a Date</h4>
+        <p>Need to find a future date? Count forward from today: Today + 90 days = May 9, 2026</p>
+
+        <h4>Subtract Days from a Date</h4>
+        <p>Find a past date: Today - 30 days = January 9, 2026</p>
+
+        <h4>Calculate Age</h4>
+        <p>For precise age calculation including years, months, and days, use our <a href="age-calculator.html">Age Calculator</a>.</p>
+      </section>
+
+      <section id="faq" class="section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">How do I calculate days between two dates?</div>
+          <div class="faq-answer">Subtract the earlier date from the later date. The calculator handles all complexities including different month lengths, leap years, and time zones automatically. Simply enter your start and end dates.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Should I include the end date in my calculation?</div>
+          <div class="faq-answer">It depends on your use case. For duration (how long something lasts), typically don't include the end date. For counting days in a range (like vacation days), include the end date. Check the "Include end date" box for inclusive counting.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How are business days calculated?</div>
+          <div class="faq-answer">Business days are Monday through Friday, excluding weekends. This calculator estimates business days by counting weekdays between your dates. For exact business day calculations that exclude holidays, check with your organization's calendar.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Why does my manual count not match the calculator?</div>
+          <div class="faq-answer">Manual counting often includes mistakes with month boundaries, leap years, or inclusive vs exclusive counting. The calculator accounts for all these factors automatically. Verify you're using the same counting method (inclusive/exclusive).</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I calculate days for past dates or future dates?</div>
+          <div class="faq-answer">Yes! This calculator works for any date combination - historical dates, current dates, or future dates. It's perfect for countdowns to future events or calculating how long ago something happened.</div>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>⚠️ Disclaimer:</strong> This calculator provides estimates based on standard calendar calculations. For legal deadlines or critical date calculations, verify with official sources or legal counsel. Business day calculations are estimates and may not account for holidays.
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="age-calculator.html">Age Calculator</a>
+        <a href="loan-emi-calculator.html">Loan EMI</a>
+      </div>
+      <p class="footer-copyright">© 2026 CalcHub. All calculators are free to use.</p>
+    </div>
+  </footer>
+
+  <script src="days-between-dates.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Earnings Calculator - Estimate TikTok Money & Revenue | Free Tool</title>
+  <meta name="description" content="Free TikTok earnings calculator. Estimate your TikTok money and revenue based on views and engagement. Calculate potential earnings from TikTok Creator Fund and brand deals.">
+  <link rel="canonical" href="https://yourdomain.com/tiktok-earnings-calculator.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo"><span class="logo-icon">🧮</span><span>CalcHub</span></a>
+      <nav class="nav-links"><a href="/">Home</a><a href="#calculator">Calculator</a><a href="#faq">FAQ</a></nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <h1>TikTok Earnings Calculator</h1>
+      <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 2rem;">
+        Calculate your potential TikTok earnings from the Creator Fund and estimate revenue from brand partnerships. 
+        Get realistic earning ranges based on your video views and engagement rates.
+      </p>
+
+      <div id="calculator" class="calculator-card">
+        <h2 style="margin-bottom: 1.5rem;">Calculate TikTok Revenue</h2>
+        <form id="tiktokForm">
+          <div class="input-group">
+            <label for="monthlyViews">Monthly Video Views</label>
+            <div class="input-with-icon">
+              <span class="input-icon">👁️</span>
+              <input type="number" id="monthlyViews" placeholder="Enter monthly views (e.g., 500000)" min="0" step="10000" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="engagementRate">Engagement Rate (%)</label>
+            <select id="engagementRate" style="width: 100%;">
+              <option value="2">2% - Low Engagement</option>
+              <option value="5" selected>5% - Average Engagement</option>
+              <option value="10">10% - Good Engagement</option>
+              <option value="15">15% - High Engagement</option>
+            </select>
+            <small style="color: var(--gray-600); font-size: 0.85rem;">Likes, comments, shares relative to views</small>
+          </div>
+
+          <div class="input-group">
+            <label for="audienceLocation">Primary Audience Location</label>
+            <select id="audienceLocation" style="width: 100%;">
+              <option value="high">Tier 1 (US, UK, Canada, Australia)</option>
+              <option value="medium" selected>Tier 2 (Europe, Japan, Korea)</option>
+              <option value="low">Tier 3 (Other Countries)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Calculate Earnings</button>
+        </form>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="resultContainer" class="result-container">
+          <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1rem; border-left: 4px solid #ef4444;">
+            <strong style="color: #991b1b;">⚠️ Range Estimate:</strong> 
+            <span style="color: #7f1d1d; font-size: 0.9rem;">TikTok earnings vary greatly. Actual revenue depends on location, niche, brand deals, and TikTok's algorithm.</span>
+          </div>
+          
+          <div class="result-label">Estimated Monthly Earnings Range</div>
+          <div id="earningsRange" class="result-value">$0 - $0</div>
+          
+          <div class="result-secondary">
+            <div class="result-item">
+              <span class="result-item-label">Creator Fund (Low):</span>
+              <span id="creatorFundLow" class="result-item-value">$0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Creator Fund (High):</span>
+              <span id="creatorFundHigh" class="result-item-value">$0</span>
+            </div>
+            <div class="result-item">
+              <span class="result-item-label">Potential Brand Deals:</span>
+              <span id="brandDeals" class="result-item-value">$0 - $0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">How TikTok Creators Make Money</h2>
+        
+        <h3>TikTok Creator Fund</h3>
+        <p>The TikTok Creator Fund pays creators directly based on video views and engagement. Payment rates typically range from $0.02 to $0.04 per 1,000 views, though some creators report rates as low as $0.01 or as high as $0.10 depending on various factors.</p>
+
+        <h3>Factors Affecting TikTok Earnings</h3>
+        <h4>Video Performance</h4>
+        <p>Views, watch time, completion rate, and engagement (likes, comments, shares) all impact earnings. Videos with higher completion rates and engagement earn more per view.</p>
+
+        <h4>Audience Location</h4>
+        <p>Creators with audiences in Tier 1 countries (US, UK, Canada) typically earn 2-3x more than those with audiences in developing countries due to higher advertiser demand.</p>
+
+        <h4>Content Niche</h4>
+        <p>Finance, business, and tech content often commands higher rates. Entertainment and dance content typically earns on the lower end of the spectrum.</p>
+
+        <h3>Additional Revenue Streams</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li><strong>Brand Partnerships:</strong> $200-$20,000+ per sponsored post depending on followers and engagement</li>
+          <li><strong>TikTok LIVE Gifts:</strong> Receive virtual gifts during live streams that convert to real money</li>
+          <li><strong>Affiliate Marketing:</strong> Promote products with commission on sales</li>
+          <li><strong>Merchandise Sales:</strong> Sell branded products to your audience</li>
+          <li><strong>Crowdfunding:</strong> Patreon or other platforms for fan support</li>
+        </ul>
+
+        <h3>Creator Fund Requirements</h3>
+        <ul style="margin-left: 1.5rem; color: var(--gray-700); line-height: 1.8;">
+          <li>10,000+ followers</li>
+          <li>100,000+ video views in the last 30 days</li>
+          <li>18 years or older (13-17 with guardian approval)</li>
+          <li>Based in eligible country</li>
+          <li>Comply with TikTok Community Guidelines and Terms of Service</li>
+        </ul>
+
+        <h3>Realistic Earnings by Follower Count</h3>
+        <p><strong>10K-50K followers:</strong> $20-$200/month (Creator Fund + small brand deals)</p>
+        <p><strong>50K-100K followers:</strong> $200-$1,000/month (Better brand deals)</p>
+        <p><strong>100K-500K followers:</strong> $1,000-$5,000/month (Regular sponsorships)</p>
+        <p><strong>500K-1M followers:</strong> $5,000-$15,000/month (Major brand partnerships)</p>
+        <p><strong>1M+ followers:</strong> $15,000+/month (Multiple revenue streams)</p>
+      </section>
+
+      <section id="faq" class="section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">How much does TikTok pay per 1,000 views?</div>
+          <div class="faq-answer">TikTok Creator Fund typically pays $0.02-$0.04 per 1,000 views, though rates vary from $0.01-$0.10 based on audience location, engagement, and content type. This is significantly lower than YouTube's rates.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How many views do I need to make money on TikTok?</div>
+          <div class="faq-answer">You need 100,000 views in the last 30 days to qualify for the Creator Fund. However, brand partnerships and other monetization methods don't have view requirements - even smaller creators can earn through sponsorships if they have engaged audiences.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I make a living from TikTok?</div>
+          <div class="faq-answer">Yes, but it requires substantial following and multiple revenue streams. Most full-time TikTokers earn primarily from brand deals, not the Creator Fund. Expect to need 500K+ followers and consistent viral content to make TikTok a primary income source.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is TikTok or YouTube better for making money?</div>
+          <div class="faq-answer">YouTube typically pays 5-10x more per view than TikTok. However, TikTok can be easier to grow initially due to its algorithm. Many creators use TikTok for audience growth and direct viewers to YouTube for better monetization.</div>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>⚠️ Disclaimer:</strong> All TikTok earnings calculations are rough estimates and may vary significantly. Actual earnings depend on audience demographics, engagement rates, content niche, brand partnership rates, TikTok algorithm changes, and other factors beyond these calculations.
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="youtube-earnings-calculator.html">YouTube Earnings</a>
+        <a href="freelance-rate-calculator.html">Freelance Rate</a>
+      </div>
+      <p class="footer-copyright">© 2026 CalcHub. All calculators are free to use.</p>
+    </div>
+  </footer>
+
+  <script src="tiktok-earnings.js"></script>
+</body>
+</html>
